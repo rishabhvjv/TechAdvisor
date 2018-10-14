@@ -26,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnbolg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mintent = new Intent(MainActivity.this,BlogActivity.class);
+                startActivity(mintent);
+            }
+        });
 
 
     }

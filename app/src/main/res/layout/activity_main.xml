@@ -9,18 +9,25 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/banner"
         />
     <Button
         android:id="@+id/btn_RecommendSmartPhone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
         android:text="Recommend me a Smart Phone"/>
 
     <Button
         android:id="@+id/btn_gotoblog"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
         android:text="Latest Smartphone Launches"/>
 
 
