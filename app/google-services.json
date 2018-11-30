@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "971799699628",
+    "firebase_url": "https://techadvisor-47482.firebaseio.com",
+    "project_id": "techadvisor-47482",
+    "storage_bucket": "techadvisor-47482.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971799699628:android:2b52f8c6d0392110",
+        "android_client_info": {
+          "package_name": "com.techadvisor.techadvisor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971799699628-uo14d6ei2dv9o4q03entmqro9nf20tti.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techadvisor.techadvisor",
+            "certificate_hash": "fc0e91664cb053fa9deb688424c10e8987e7d840"
+          }
+        },
+        {
+          "client_id": "971799699628-i7e2mg5fmg9p1j2j5101iekpr4u4ksmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4LrghQUK0adOh6fCJXwKbBL8CUMZYw4w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971799699628-i7e2mg5fmg9p1j2j5101iekpr4u4ksmj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
