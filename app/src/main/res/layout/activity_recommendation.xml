@@ -42,6 +42,7 @@
             android:textAlignment="center" />
 
         <EditText
+            android:id="@+id/etMinPrice"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".4"
@@ -49,6 +50,7 @@
             android:hint="MIN" />
 
         <EditText
+            android:id="@+id/etMaxPrice"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".4"

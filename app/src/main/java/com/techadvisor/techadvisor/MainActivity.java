@@ -9,6 +9,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button btnrecommend, btnbolg;
+    Button btnchat,btntoplist;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
         btnrecommend = (Button)findViewById(R.id.btn_RecommendSmartPhone);
         btnbolg = (Button)findViewById(R.id.btn_gotoblog);
+
+        btnchat = (Button) findViewById(R.id.chatButtonId);
+        btntoplist = (Button) findViewById(R.id.topPhonesListButtonId);
 
         btnrecommend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +38,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(mintent);
             }
         });
+
+        btnchat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cintent = new Intent(MainActivity.this, chatActivity.class);
+                startActivity(cintent);
+            }
+        });
+
+        btntoplist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pintent = new Intent(MainActivity.this,topPhonesListActivity.class);
+                startActivity(pintent);
+            }
+        });
+
+        
 
 
     }

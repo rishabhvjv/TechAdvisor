@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -55,23 +56,28 @@ public class SignUpActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if(task.isSuccessful())
                                     {
+                                        Log.d("check_1", "onComplete: " + firebaseAuth.getCurrentUser().getUid() + "\t" + firebaseAuth.getCurrentUser().getEmail());
                                         User thisUser = new User(etName.getText().toString(),etEmail.getText().toString());
-                                        databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(thisUser)
-                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                    @Override
-                                                    public void onComplete(@NonNull Task<Void> task) {
-                                                        if(task.isSuccessful())
-                                                        {
-                                                            Toast.makeText(SignUpActivity.this, "Welcome "+ etName.getText().toString(), Toast.LENGTH_SHORT).show();
-                                                            Intent thisIntent = new Intent(SignUpActivity.this,MainActivity.class);
-                                                            startActivity(thisIntent);
-                                                        }
-                                                        else
-                                                        {
-                                                            Toast.makeText(SignUpActivity.this, "Registration Failed!", Toast.LENGTH_SHORT).show();
-                                                        }
-                                                    }
-                                                });
+                                        databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(thisUser);
+                                        Toast.makeText(SignUpActivity.this, "Welcome "+ etName.getText().toString(), Toast.LENGTH_SHORT).show();
+                                        Intent thisIntent = new Intent(SignUpActivity.this,MainActivity.class);
+                                        startActivity(thisIntent);
+//                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                                                    @Override
+//                                                    public void onComplete(@NonNull Task<Void> task) {
+//                                                        if(task.isSuccessful())
+//                                                        {
+//                                                            Log.d("check_2", "onComplete: ");
+//                                                            Toast.makeText(SignUpActivity.this, "Welcome "+ etName.getText().toString(), Toast.LENGTH_SHORT).show();
+//                                                            Intent thisIntent = new Intent(SignUpActivity.this,MainActivity.class);
+//                                                            startActivity(thisIntent);
+//                                                        }
+//                                                        else
+//                                                        {
+//                                                            Toast.makeText(SignUpActivity.this, "Registration Failed!", Toast.LENGTH_SHORT).show();
+//                                                        }
+//                                                    }
+//                                                });
                                     }
                                     else
                                     {

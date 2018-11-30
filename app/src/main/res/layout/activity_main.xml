@@ -16,7 +16,8 @@
         android:id="@+id/btn_RecommendSmartPhone"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/rounded_button"
         android:textColor="@android:color/white"
         android:text="Recommend me a Smart Phone"/>
@@ -29,6 +30,34 @@
         android:background="@drawable/rounded_button"
         android:textColor="@android:color/white"
         android:text="Latest Smartphone Launches"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/topPhonesListButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
+            android:text="Top Smartphones" />
+
+        <Button
+            android:id="@+id/chatButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
+            android:layout_weight="0.5"
+            android:text="Chat with Expert" />
+    </LinearLayout>
 
 
 </LinearLayout>
