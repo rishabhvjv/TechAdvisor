@@ -20,6 +20,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public static final String TAG = LoginActivity.class.getName();
+    
     private EditText emailString;
     private EditText passwordString;
     private Button loginButton;
@@ -32,13 +34,10 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseUser mUser;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
 
         emailString = (EditText) findViewById(R.id.emailFieldId);
         passwordString = (EditText) findViewById(R.id.passwordFieldId);
@@ -66,10 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                     String password = passwordString.getText().toString();
                     Login(email, password);
                     spinner.setVisibility(spinner.VISIBLE);
-                } else {
-                    //do nothing
-                }
-
+                } 
             }
         });
 
@@ -94,7 +90,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 else {
                     Toast.makeText(LoginActivity.this , "sign In failed!!", Toast.LENGTH_LONG).show();
-
                 }
             }
         });
